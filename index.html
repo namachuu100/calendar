@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>縦スクロールカレンダー</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PWA設定 -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f2b800">
+  <meta name="mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+  <div class="calendar-app">
+
+    <!-- スクロールするカレンダー本体 -->
+    <div id="scroll-container" class="scroll-container"></div>
+
+    <!-- 画面下部に固定配置する入力フォーム -->
+    <div id="memo-form-container" class="memo-form hidden">
+      <h3 id="selected-date-label">予定の入力</h3>
+
+      <input
+        type="text"
+        id="memo-input"
+        placeholder="予定を入力（4〜5文字推奨）">
+
+      <div class="btn-group">
+        <button id="save-btn" class="btn-save">保存</button>
+        <button id="delete-btn" class="btn-delete">削除</button>
+        <button id="cancel-btn" class="btn-cancel">閉じる</button>
+      </div>
+  
